@@ -25,7 +25,14 @@ Este projeto simula um sistema de gestão de biblioteca utilizando **PL/SQL**, a
 
 ## 📂 Estrutura dos Arquivos
 
-plsql-library-system/ │ ├── create_tables.sql # Criação das tabelas do sistema ├── insert_data.sql # Inserção de dados de exemplo ├── procedures.sql # Procedures de empréstimo e devolução ├── functions.sql # Function para cálculo de multa ├── triggers.sql # Trigger para limitar empréstimos ├── cursors.sql # Cursor para relatório de livros emprestados ├── teste.sql # Blocos anônimos de teste └── README.md # Este arquivo
+plsql-library-system/ │
+├── create_tables.sql # Criação das tabelas do sistema 
+├── insert_data.sql # Inserção de dados de exemplo 
+├── procedures.sql # Procedures de empréstimo e devolução 
+├── functions.sql # Function para cálculo de multa 
+├── triggers.sql # Trigger para limitar empréstimos 
+├── cursors.sql # Cursor para relatório de livros emprestados 
+├── teste.sql # Blocos anônimos de teste └── README.md # Este arquivo
 
 
 
@@ -51,17 +58,21 @@ Execute os scripts na ordem abaixo:
 🧪 Exemplos de uso
 
 -- Realizar empréstimo
+
 BEGIN
     REALIZAR_EMPRESTIMO(p_livro_id => 1, p_usuario_id => 1);
 END;
 
 -- Devolver livro
+
 BEGIN
     DEVOLVER_LIVRO(p_emprestimo_id => 1);
 END;
 
 -- Ver multa
+
 SELECT CALCULAR_MULTA(1) AS MULTA_ATUAL FROM DUAL;
+
 🙋‍♂️ Autor
       Desenvolvido por Hugo Farranha
 💼 GitHub: https://github.com/hugocorrea01
